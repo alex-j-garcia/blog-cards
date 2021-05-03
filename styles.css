@@ -1,0 +1,59 @@
+/***************************
+|| General Styles
+****************************/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 150px;
+}
+
+/***************************
+|| Typography
+****************************/
+html {
+  font-size: 62.5%;
+  font-family: Helvetica, Verdana, sans-serif;
+}
+
+/***************************
+|| Utilities
+****************************/
+
+.debugging {
+  border: 1px solid red;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 40px;
+  gap: 40px;
+}
+
+/***************************
+|| Cards
+****************************/
+
+.card {
+  grid-column: span 2;
+}
