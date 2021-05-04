@@ -4,6 +4,15 @@
 
 html {
   box-sizing: border-box;
+
+  /* CSS Custom Properties */
+  --color-egshell: hsla(180, 50%, 97%, 1);
+  --color-brown: hsla(309, 14%, 30%, 1);
+  --color-grey: hsla(281, 8%, 62%, 1);
+  --color-medium-brown: hsla(17, 19%, 53%, 1);
+  --color-teal: hsla(192, 49%, 54%, 1);
+  --color-light-brown: hsla(358, 18%, 65%, 1);
+  --font-color: hsla(0, 1.4%, 27.8%, 1);
 }
 
 *,
@@ -14,8 +23,8 @@ html {
   padding: 0;
 }
 
-img {
-  width: 150px;
+.card-footer > img {
+  width: 100px;
 }
 
 /***************************
@@ -36,7 +45,7 @@ html {
 
 .container {
   width: 80%;
-  margin: auto;
+  margin: 10rem auto;
 }
 
 .flex {
@@ -56,4 +65,41 @@ html {
 
 .card {
   grid-column: span 2;
+  border-radius: 1rem;
+}
+
+.card-image {
+  height: 20rem;
+}
+
+.card-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body,
+.card-footer {
+  padding: 2rem;
+}
+
+.card-body {
+  color: var(--font-color);
+  font-size: 1.6rem;
+}
+
+.card-body span {
+  display: inline-block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+  padding: .3rem 1.1rem;
+  border-radius: 1rem;
+  margin-bottom: 1.6rem;
+  background-color: var(--color-teal);
+}
+
+.card-body h1 {
+  font-size: 1.9rem;
+  margin-bottom: 1.6rem;
 }
