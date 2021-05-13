@@ -13,6 +13,10 @@ html {
   --color-teal: hsla(192, 49%, 54%, 1);
   --color-light-brown: hsla(358, 18%, 65%, 1);
   --font-color: hsla(0, 1.4%, 27.8%, 1);
+  --color-blueGrey: hsla(200, 10%, 96%, 1);
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-purple: hsla(250, 50%, 50%);
+  --color-pink: hsla(290, 70%, 70%, 1);
 }
 
 *,
@@ -44,19 +48,16 @@ html {
 }
 
 .container {
-  width: 80%;
-  margin: 10rem auto;
+  border: 1px solid black;
+  display: flow-root;
+  width: 1400px;
+  margin: 3rem auto;
+  padding: 10rem 0;
+  background-color: var(--color-blueGrey);
 }
 
 .flex {
   display: flex;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 40px;
-  gap: 40px;
 }
 
 /***************************
@@ -64,8 +65,19 @@ html {
 ****************************/
 
 .card {
-  grid-column: span 2;
+  width: calc((100% - 200px) / 3);
   border-radius: 1rem;
+  margin-left: 50px;
+  background-color: var(--color-white);
+}
+
+.card:first-of-type {
+  float: left;
+}
+
+.card:nth-of-type(2),
+.card:last-of-type {
+  float: left;
 }
 
 .card-image {
@@ -76,6 +88,7 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 1em 1em 0 0;
 }
 
 .card-body,
@@ -99,7 +112,28 @@ html {
   background-color: var(--color-teal);
 }
 
+.card:nth-of-type(2) .card-body span {
+  background-color: var(--color-purple);
+}
+
+.card:last-of-type .card-body span {
+  background-color: var(--color-pink);
+}
+
 .card-body h1 {
   font-size: 1.9rem;
   margin-bottom: 1.6rem;
+}
+
+/*
+ * Unitless number values are the preferred
+ * way to set line-height.
+ * The value assigned is the element's font
+ * size multiplied by the given number. For
+ * example, an element has a font-size of 1rem
+ * (10px), a declaration of `line-height: 2;`
+ * will create a 20px space between line boxes.
+ */
+.card-content {
+  line-height: 1.4;
 }
