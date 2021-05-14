@@ -93,7 +93,7 @@ html {
 
 .card-body,
 .card-footer {
-  padding: 2rem;
+  margin: 2rem;
 }
 
 .card-body {
@@ -136,4 +136,42 @@ html {
  */
 .card-content {
   line-height: 1.4;
+}
+
+.card-footer {
+  margin-top: 4rem;
+}
+
+.author {
+  display: flex;
+}
+
+.card .author-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-size: cover;
+  margin-right: 1rem;
+}
+
+.card:first-of-type .author-image {
+  background-image: url("./assets/author1.jpg");
+}
+
+.card:nth-of-type(2) .author-image {
+  background-image: url("./assets/author2.jpg");
+}
+
+.card:last-of-type .author-image {
+  background-image: url("./assets/author3.jpeg");
+}
+
+.post-details div:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.post-details div:nth-child(2) {
+  font-size: 1.2rem;
+  margin-top: .5rem;
 }
