@@ -65,7 +65,9 @@ html {
 ****************************/
 
 .card {
+  position: relative;
   width: calc((100% - 200px) / 3);
+  height: 470px;
   border-radius: 1rem;
   margin-left: 50px;
   background-color: var(--color-white);
@@ -140,6 +142,8 @@ html {
 
 .card-footer {
   margin-top: 4rem;
+  position: absolute;
+  bottom: 0;
 }
 
 .author {
@@ -164,6 +168,10 @@ html {
 
 .card:last-of-type .author-image {
   background-image: url("./assets/author3.jpeg");
+}
+
+.post-details div {
+  color: var(--font-color);
 }
 
 .post-details div:first-child {
