@@ -157,6 +157,7 @@ html {
   border-radius: 50%;
   background-size: cover;
   margin-right: 1rem;
+  background-position: center;
 }
 
 .card:first-of-type .author-image {
